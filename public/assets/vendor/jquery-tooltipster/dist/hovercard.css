@@ -1,0 +1,218 @@
+.hovercard {
+    width: 370px;
+    min-height: 200px;
+    max-height: 240px;
+    border: 0;
+    border-radius: 2px;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, .1), 0 1px 10px rgba(0, 0, 0, .35);
+    -webkit-border-radius: 2px;
+    -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, .1), 0 1px 10px rgba(0, 0, 0, .35);
+}
+
+.hovercard a {
+    color: #3B5998;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.hovercard a:hover {
+    text-decoration: underline;
+}
+
+/** Cover picture styles */
+.hovercard .display-pic {
+    height: 137px;
+    background-color: var(--app-color);
+}
+
+.hovercard .display-pic-gradient {
+    height: 97px;
+    position: absolute;
+    top: 43px;
+    width: 100%;
+    background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(38, 38, 38, 0.40) 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(100%, rgba(38, 38, 38, 0.40)));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(38, 38, 38, 0.40) 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(38, 38, 38, 0.40) 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(38, 38, 38, 0.40) 100%);
+    /* IE10+ */
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(38, 38, 38, 0.40) 100%);
+    /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#8c262626', GradientType=0);
+    /* IE6-9 */
+}
+
+.hovercard .cover-photo {
+    height: 140px;
+    clip-path: polygon(0 5.7%, 2% 5.5%,3.7% 0, 5.7% 5.7%, 100% 5.7%, 100% 100%, 0 100%);
+    position: absolute;
+    margin-top: -8px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.hovercard .cover-photo>img {
+    width: 100%
+}
+
+.hovercard .profile {
+    position: absolute;
+    width: 350px;
+    height: 100px;
+    left: 10px;
+    top: 85px;
+    display: flex;
+    flex: 1 1;
+    z-index: 1;
+}
+
+.hovercard .avatar-pic {
+    border: 1px solid rgba(0, 0, 0, .3);
+    width: 100px;
+    height: 100px;
+    border-radius: 3px;
+    padding: 3px;
+    background-color: white;
+}
+
+.hovercard .avatar-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hovercard .title-container .author {
+    height: 50px;
+}
+
+.hovercard .title-container {
+    margin-left: 10px;
+    margin-top: 10px;
+    width: 270px;
+}
+
+.hovercard .title-container a {
+    color: #ffffff;
+    font-size: 12px;
+    /* font-weight: bold; */
+    font-size: 14px;
+    text-decoration: underline;
+}
+
+.hovercard .other-info {
+    color: #fff;
+    font-size: 12px;
+    margin: 0;
+}
+
+/** Hover card info and interaction */
+.hovercard .info {
+    height: 37px;
+    width: 100%;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    position: relative;
+    /* top: 200px; */
+}
+
+.hovercard .info-inner {
+    padding: 9px;
+    margin-left: 120px;
+}
+
+.hovercard .info-inner a {
+    text-decoration: none;
+}
+
+.hovercard .interactions {
+    float: right;
+    padding: 3px 10px;
+}
+
+/** Person/Page info styles */
+.hovercard .details {
+    /* margin-left: 90px; */
+    font-size: 11px;
+}
+
+.hovercard .details-list {
+    list-style-type: none;
+    padding: 0;
+    color: #333;
+    font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;
+    margin-bottom: 0;
+}
+
+.hovercard .details-list-sub-item {
+    color: #9197a3;
+}
+
+/** Hovercard utils */
+.hovercard .glyph {
+    background-repeat: no-repeat;
+    background-image: url('spirit.png');
+    background-size: auto;
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+}
+
+.hovercard .glyph-home {
+    background-position-y: 0px;
+}
+
+.hovercard .glyph-edu {
+    background-position-y: -15px;
+}
+
+.hovercard .glyph-loc {
+    background-position-y: -34px;
+}
+
+.hovercard .glyph-work {
+    background-position-y: -50px;
+}
+
+.hovercard .btn {
+    background: #f6f7f8;
+    border: 1px solid #c6c7ca;
+    color: #747474;
+    font-size: 12px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, 'lucida grande', tahoma, verdana, arial, sans-serif;
+    font-weight: bold;
+    padding: 6px 8px;
+    text-align: center;
+    text-decoration: initial;
+    vertical-align: middle;
+    -webkit-border-radius: 2px;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+    -webkit-box-sizing: content-box;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* for demo */
+.hovercard #global-container {
+    width: 800px;
+    height: 400px;
+    margin: 30px auto;
+    background-color: #E0E8FF;
+    border: 1px solid lightgrey;
+    border-radius: 3px;
+    padding: 10px;
+    text-align: center;
+}
+
+.tooltipster-arrow-bottom-left span {
+    /* display : none; */
+    border-color: var(--app-color);
+}
+
+.tooltipster-arrow-top-left span {
+}

@@ -1,0 +1,45 @@
+{
+    "filters":{
+        "tones": {
+            "title": "ចម្រុះ"
+        },
+        "recent": {
+            "icon": "clock3",
+            "title": "ទើបត្រូវបានប្រើ"
+        },
+        "smileys_people": {
+            "icon": "yum",
+            "title": "ស្នាមញញឹម & មនុស្ស"
+        },
+        "animals_nature": {
+            "icon": "hamster",
+            "title": "សត្វ & ធម្មជាតិ"
+        },
+        "food_drink": {
+            "icon": "pizza",
+            "title": "អាហារ & ភេសជ្ជៈ"
+        },
+        "activity": {
+            "icon": "basketball",
+            "title": "សកម្មភាព"
+        },
+        "travel_places": {
+            "icon": "rocket",
+            "title": "ការធ្វើដំណើរ & ទីកន្លែង"
+        },
+        "objects": {
+            "icon": "bulb",
+            "title": "វត្ថុ"
+        },
+        "symbols": {
+            "icon": "heartpulse",
+            "title": "និមិត្តសញ្ញា"
+        },
+        "flags": {
+            "icon": "flag_gb",
+            "title": "ទង់"
+        }
+},
+"searchPlaceholder": "ស្វែងរក",
+"buttonTitle": "ប្រើគ្រាប់ចុចថេបដើម្បីបញ្ចូលសញ្ញាអារម្មណ៍លឿនជាងមុន"
+}

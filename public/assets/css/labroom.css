@@ -1,0 +1,254 @@
+<style>
+    body {
+        background: #edeff1;
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+        font-family: Roboto, Arial, sans-serif;
+        font-size: 13px;
+        line-height: 1.4;
+        overflow: hidden;
+        overflow-y: auto;
+        transition: all 0.2s ease;
+    }
+
+    ul {
+        list-style-type: none;
+
+    }
+    /*Call*/
+    div.call-box {
+        width: 100%;
+        height: 100%;
+        padding: 0px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        background: #000;
+        position: fixed;
+        box-shadow: 0 0 0 1px rgba(0, 0, 0, .1);
+        border-radius: 3px;
+        z-index: 1;
+
+        /*  width: 270px;
+    height: 300px;
+    padding: 0px;
+    top: 0px;
+    text-align: center;
+    background: #fff;
+    display: inline-block;
+    position: relative;
+    margin: 10px;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, .1);
+    border-radius: 3px;*/
+
+        /* width: 270px;
+    height: 300px;
+    padding: 0px;
+    top: 0px;
+    right: 250px;
+    text-align: center;
+    background: #fff;
+    display: inline-block;
+    position: absolute;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, .1);
+    border-radius: 3px;*/
+    }
+
+
+
+    div.call-box div.call-box-body {
+        position: absolute;
+        top: 0;
+        bottom: 0px;
+        left: 0;
+        right: 0;
+    }
+
+    div.call-box div.call-box-body div.you {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        z-index: 1;
+    }
+
+    div.call-box div.call-box-body div.you,
+    div.me {
+        overflow: hidden;
+    }
+
+    div.call-box div.call-box-body div.you video,
+    div.me video {
+        width: 100%;
+        height: 100%;
+        transform: scale(-1, 1);
+    }
+
+    div.call-box div.call-box-body div.me {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        right: 30px;
+        bottom: 10px;
+        border: 1px solid rgb(0, 0, 0, .1);
+        z-index: 2;
+
+    }
+
+    div.call-box-footer {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 100px;
+        z-index: 1;
+    }
+
+    div.call-box-footer section {
+        display: inline-flex;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+        will-change: transform;
+        opacity: 1;
+        display: flex;
+        flex-flow: row nowrap;
+        margin: 12px;
+        pointer-events: none;
+        transition: opacity 1s;
+        z-index: 2;
+    }
+
+
+    div.call-box-footer section div button {
+        background: rgba(100, 100, 100, .75);
+        border: 1px solid transparent;
+        color: #fff;
+        transition: background-color .3s;
+        will-change: background;
+        margin-left: auto;
+        pointer-events: auto;
+        display: inline-block;
+        text-decoration: none;
+        white-space: nowrap;
+        border-radius: 50%;
+        margin: 0;
+        outline: none;
+        overflow: hidden;
+        padding: 0;
+        font-size: 12px;
+        font-family: Helvetica, Arial, sans-serif;
+    }
+
+    div.call-box-footer section div button svg {
+        margin: -1px;
+        height: 48px;
+        width: 48px;
+        display: block;
+        height: 100%;
+        pointer-events: none;
+    }
+
+    div.call-box-footer section div button svg path {
+        fill: currentColor;
+        stroke: none;
+    }
+
+    div.call-box-footer section div button span {
+        clip: rect(1px, 1px, 1px, 1px);
+        height: 1px;
+        width: 1px;
+        overflow: hidden;
+        position: absolute;
+        white-space: nowrap;
+        pointer-events: auto;
+    }
+
+    div.call-box-footer section div div {
+        color: #fff;
+        margin-top: 9px;
+    }
+
+    div.call-box-footer section div:not(:first-child) {
+        margin-left: 24px
+    }
+
+    div.call-box-footer section div button[aria-disabled="true"],
+    div.call-box-footer section div button.closeWindow {
+        background: rgba(255, 255, 255, 0);
+        border: 1px solid currentColor;
+    }
+
+    div.call-box-footer section div button.endCall {
+        color: #fff;
+        background: #f03d25;
+    }
+
+    div.call-box div.call-box-body div.you section {
+        /* margin: auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);*/
+        margin: 100px auto 40%;
+
+    }
+
+    div.call-box div.call-box-body div.you section div.list-main {
+        display: flex;
+        flex-flow: column;
+        min-height: 254px;
+    }
+
+    div.call-box div.call-box-body div.you section div.list-main div.list-1 {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    div.call-box div.call-box-body div.you section div.list-main div.list-1 div.list-2 {
+        border-radius: 50%;
+        margin: 12px;
+        box-shadow: rgba(0, 132, 255, 0.5) 0px 0px 0px 0px;
+    }
+
+    div.call-box div.call-box-body div.you section div.list-main div.list-1 div.list-2 div.list-3 {
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        pointer-events: none;
+        position: relative;
+    }
+
+    div.call-box div.call-box-body div.you section div.list-main div.list-1 div.list-2 div.list-3 div.list-4 img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
+    }
+
+    div.call-box div.call-box-body div.you section div.list-main div.list-1 p {
+        color: #fff;
+        display: block;
+        font-size: 18px;
+        line-height: 23px;
+        margin: 12px auto 0;
+        min-height: 23px;
+    }
+
+    div.call-box div.call-box-body div.you section div.list-main div.con {
+        color: #a3a3a3;
+        display: block;
+        font-size: 18px;
+        line-height: 22px;
+        margin: 10px auto;
+    }
+
+    div.call-box-footer section div.title {
+        margin-left: 0px;
+    }
+</style>

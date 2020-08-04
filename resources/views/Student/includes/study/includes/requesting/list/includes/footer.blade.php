@@ -1,0 +1,18 @@
+<div class="card-footer border-0">
+    <div class="mt-3 pull-right">
+        @if($response["success"])
+        <ul class="pagination justify-content-end"
+            data-url="{{str_replace("approved","request",$response["pages"]["path"])}}"
+            data-total-pages="{{$response["pages"]["last_page"]}}" data-total-items="{{$response["pages"]["total"]}}"
+            data-per-pages="{{$response["pages"]["per_page"]}}"
+            data-current-page="{{$response["pages"]["current_page"]}}" data-search-page="{{config("pages.search")}}"
+            data-table="table#request-table">
+        </ul>
+        @else
+        <ul class="pagination justify-content-end" data-url="#" data-total-pages=0 data-total-items=0 data-per-pages=0
+            data-current-page=0>
+        </ul>
+        @endif
+
+    </div>
+</div>

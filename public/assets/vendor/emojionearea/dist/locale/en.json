@@ -1,0 +1,45 @@
+{
+    "filters":{
+        "tones": {
+            "title": "Filters"
+        },
+        "recent": {
+            "icon": "clock3",
+            "title": "Recent"
+        },
+        "smileys_people": {
+            "icon": "yum",
+            "title": "Smileys ​& People"
+        },
+        "animals_nature": {
+            "icon": "hamster",
+            "title": "Animal & Nature"
+        },
+        "food_drink": {
+            "icon": "pizza",
+            "title": "Food & Drink"
+        },
+        "activity": {
+            "icon": "basketball",
+            "title": "Activity"
+        },
+        "travel_places": {
+            "icon": "rocket",
+            "title": "Travel & Places"
+        },
+        "objects": {
+            "icon": "bulb",
+            "title": "Objects"
+        },
+        "symbols": {
+            "icon": "heartpulse",
+            "title": "Symbols"
+        },
+        "flags": {
+            "icon": "flag_gb",
+            "title": "Flags"
+        }
+},
+"searchPlaceholder": "Search",
+"buttonTitle": "Use the TAB key to insert emoji faster"
+}

@@ -1,0 +1,196 @@
+body {
+    background: #000 !important;
+}
+
+a, a:link, a:hover {
+    text-decoration: none;
+}
+
+.sidebar.left {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    bottom: 0;
+    width: 220px;
+    background: #000;
+    -webkit-box-shadow: 1px 0px 11px 0px rgba(50, 50, 50, 0.2);
+    -moz-box-shadow: 1px 0px 11px 0px rgba(50, 50, 50, 0.2);
+    box-shadow: 1px 0px 11px 0px rgba(50, 50, 50, 0.2);
+}
+
+.m-t-60 {
+    margin-top: 63px;
+}
+
+.my-sideber {
+    height: 890px;
+    overflow-y: auto;
+}
+
+@media (min-width: 1200px) {
+    .m-left {
+        margin-left: 232px;
+    }
+}
+
+.content {
+    margin-top: 15px;
+}
+
+.video-list-thumbs>li {
+    margin-bottom: 12px
+}
+
+.video-list-thumbs>li>a {
+    display: block;
+    position: relative;
+    background-color: #212121;
+    color: #fff;
+    padding: 0px;
+}
+
+.video-list-thumbs>li>a:hover {
+    background-color: #000;
+    transition: all 500ms ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .3);
+    text-decoration: none
+}
+
+.video-list-thumbs .duration {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 2px;
+    color: #fff;
+    font-size: 11px;
+    font-weight: bold;
+    left: 2px;
+    line-height: 13px;
+    padding: 4px;
+    position: absolute;
+    bottom: 2px;
+}
+
+.video-list-thumbs>li>a:hover .duration {
+    background: rgba(184, 44, 44, 0.9);
+    transition: all 500ms ease;
+}
+
+.video-list-thumbs .time {
+    background-color: rgba(0, 200, 240, 0.8);
+    color: #fff;
+    font-size: 11px;
+    font-weight: bold;
+    right: 2;
+    line-height: 13px;
+    padding: 4px;
+    position: absolute;
+    bottom: 2px;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .video-list-thumbs .fa-play-circle-o {
+        font-size: 35px;
+        right: 36%;
+        top: 27%;
+    }
+
+    .video-list-thumbs h2 {
+        bottom: 0;
+        padding: 3px;
+        font-size: 12px;
+        height: 22px;
+        margin: 8px 0 0;
+    }
+}
+
+/* END */
+@media (max-width: 1200px) {
+    .sidebar {
+        display: none;
+    }
+}
+
+.main-video {
+    position: relative;
+}
+
+.main-video .option {
+    border-radius: 2px;
+    color: #fff;
+    font-size: 11px;
+    font-weight: bold;
+    left: 50%;
+    line-height: 13px;
+    padding: 4px;
+    position: absolute;
+    bottom: 2px;
+    transform: translate(-50%);
+    display: inline-flex;
+}
+
+video {
+    width: 100%;
+}
+
+.main-video .option button {
+    background: rgba(100, 100, 100, .75);
+    border: 1px solid transparent;
+    color: #fff;
+    transition: background-color .3s;
+    will-change: background;
+    margin-left: auto;
+    pointer-events: auto;
+    display: inline-block;
+    text-decoration: none;
+    white-space: nowrap;
+    border-radius: 50%;
+    margin: 0;
+    outline: none;
+    overflow: hidden;
+    padding: 0;
+    font-size: 12px;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.main-video .option button svg {
+    margin: -1px;
+    height: 48px;
+    width: 48px;
+    display: block;
+    height: 100%;
+    pointer-events: none;
+}
+
+.main-video .option button svg path {
+    fill: currentColor;
+    stroke: none;
+}
+
+.main-video .option button span {
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    pointer-events: auto;
+}
+
+.main-video .option div {
+    color: #fff;
+    padding: 10px;
+}
+
+.main-video .option:not(:first-child) {
+    margin-left: 24px
+}
+
+.main-video .option button[aria-disabled="true"], .main-video .option button.closeWindow {
+    background: rgba(255, 255, 255, 0);
+    border: 1px solid currentColor;
+}
+
+.main-video .option button.endCall {
+    color: #fff;
+    background: #f03d25;
+}

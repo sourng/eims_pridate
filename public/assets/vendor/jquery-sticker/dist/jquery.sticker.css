@@ -1,0 +1,172 @@
+.sticker-button {
+    opacity: 0.6;
+    top: 4px;
+    right: 30px;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAMAAABhEH5lAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABOFBMVEUAAAABAQEGBwcmKCsDBAQICQoHCAkfISQdHyEnKi0KCwwiJCc4O0AFBgcZGx0SExUJCgoODxFKT1YDAwMtLzMYGRwsLzM9QUc9QkgoKi5ZX2cXGRtgZ3AlJysyNTogIiQVFxkCAgIgIiUQERIUFhgcHiEzNzwHBwgpLTElKCtfZW4aHB4CAgMPEBIaGx0VFhgAAQEICAkKCw0rLjEmKSxCR00/REoHCAgmKCxDSE4rLjIKCgsdHyIXGBodICMhJCceHyIcHyESFBYEBQUkJikJCQozMzM4ODhSbJZfZnFhZ3BgZ3FgZ3BgZ3BgZ3BcYmtgZ3BgZ3BgZ3BgZ3BgZ3BgZ3BgZnBvYmxeZW5fZnBgZ3BgZnBcYmtgZ3BfZm9gZ3BgZ3EkKDFeZnNhZ3FhZ3BgZ3BhZ3D////3RIoHAAAAZnRSTlMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFLluQu+sUJXam2frQShkLHGxmmhDjfPS0AjzFg8ArZ1ZQAAAAAWJLR0RnW9PpswAAAAd0SU1FB+QCHRAXAm4ZadwAAAEWSURBVBjTZZBpV4JQEIYnzdIWTCXaF1zK9rI9S9sDrlfvBURMIDCa//8TAuub82HOmfe885x5B2C8JkYtoagaaVHEdnISUlOpDuO6YXLWtXqE2tMASYsSTVUSsT2d4f0ZmJ1DMi/8U7ILn4McQB6dTCEaRRFxUWJ0CWDZtfMriOJqJK1J3tc6wIbf3dyKJBFgW/bQKEYbhJXKI1Il4DikOwC7Gq+mY2Uv0Fu94fc+wIFqSofMOTo+Ccnp2YDloHauGMoF053LNrWvLGoV4frmVlfv6h651/xa1gzrD9HFVa4VSiA0CAt8HlQiarnESEOQmz29/+Mrj3GuxFOHho5NkLp9+fkv2Murhei6/lB5iy3v4w/8+AX1uzmnnPg6XwAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMC0wMi0yOVQxNjoyMzowMi0wODowMHusGKgAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjAtMDItMjlUMTY6MjM6MDItMDg6MDAK8aAUAAAAAElFTkSuQmCC');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.sticker-button:hover {
+    opacity : 1;
+}
+
+.sticker-wrapper {
+    display: none;
+    width: 282px;
+    height: auto;
+    border-radius: 3px;
+    background: #fff;
+    z-index: 1;
+
+
+}
+
+.sticker-wrapper .sticker-tab {
+    display: flex;
+    border-bottom: 1px solid rgb(204, 204, 204);
+    overflow: hidden;
+    overflow-x: auto;
+}
+
+.sticker-wrapper .sticker-tab>a {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    padding: 6px;
+    line-height: 39px;
+    outline: 0;
+    position: relative;
+    text-align: center;
+}
+
+.sticker-wrapper a.back {
+    position: sticky;
+    left: 0;
+    background: #fff;
+    z-index: 1;
+}
+
+.sticker-wrapper a.next {
+    position: sticky;
+    right: 0;
+    background: #fff;
+    z-index: 1;
+}
+
+.sticker-wrapper .sticker-tab>a.active {
+    cursor: default;
+    background-color: rgb(233, 235, 238);
+}
+
+.sticker-wrapper .ui-sticker {
+    margin: 0px;
+    list-style: none;
+    padding: 5px 0px;
+    height: 332px;
+    max-height: 332px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.sticker-wrapper .ui-sticker .sticker {
+    cursor: pointer;
+    width: 64px;
+    height: 74px;
+    display: block;
+    float: left;
+    position: relative;
+    padding: 2px;
+    text-align: center;
+    border-radius: 3px;
+}
+
+.sticker-wrapper .ui-sticker .sticker:hover {
+    background: #e9ebee;
+}
+
+.sticker-wrapper .icon {
+    background-image: url(icon/FSDA752CrT4.png);
+    background-size: auto;
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+}
+
+.sticker-wrapper .icon.filter {
+    background-position: 0 -139px;
+}
+
+.sticker-wrapper .icon.recent {
+    background-position: -25px -114px;
+}
+
+.sticker-wrapper .icon.next {
+    height: 24px;
+    width: 24px;
+    background-position: 0 -114px;
+}
+
+.sticker-wrapper .icon.back {
+    height: 24px;
+    width: 24px;
+    background-position: -33px -81px;
+}
+.sticker-wrapper .filter-wrapper .suggest,
+.sticker-wrapper .filter-wrapper .ui-sticker{
+    height: 292px;
+}
+
+.sticker-wrapper .filter-wrapper .filter {
+    padding: 5px;
+    border-bottom: 1px solid #ccc;
+}
+
+.sticker-wrapper .filter-wrapper .filter input {
+    width: 100%;
+    height: 30px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background-color: #f7f7f7;
+    font-size: 12px;
+    padding: 4px 32px 4px 4px;
+}
+
+.sticker-wrapper .filter-wrapper .filter .clear {
+    position: absolute;
+    right: 5px;
+    height: 30px;
+    padding: 4px 10px;
+    background-color: rgb(237, 81, 62);
+    color: #fff;
+    border: 0;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    font-weight: bold;
+}
+
+.sticker-wrapper .filter-wrapper .suggest>div {
+    padding: 5px;
+    width: 140px;
+    display: block;
+    position: relative;
+    float: left;
+}
+
+.sticker-wrapper .filter-wrapper .suggest>div button {
+    border: none;
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: #fff;
+    padding: 5px;
+    text-align: left;
+    text-shadow: none;
+    text-transform: capitalize;
+    width: 100%;
+    font-size: 12px;
+}

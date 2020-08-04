@@ -1,0 +1,785 @@
+@font-face {
+    font-family: KhmerOSMoul;
+    src: url("../fonts/KhmerOSMoul.ttf");
+}
+
+@font-face {
+    font-family: NiDAKhmerEmpire;
+    src: url("../fonts/NiDAKhmerEmpire.ttf");
+}
+
+@page {
+    margin: 0
+}
+
+header h1 {
+    color: white !important;
+    font-size: 1.5rem;
+    margin: 0;
+    font-family: KhmerOSMoul,NiDAKhmerEmpire;
+    text-align: center;
+}
+
+.paper {
+    margin: 0;
+    text-align: center;
+}
+
+.sheet {
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+    page-break-after: always;
+}
+
+/** Paper sizes **/
+.A3 .sheet {
+    width: 297mm;
+    height: 419mm;
+    size: portrait;
+}
+
+.A3.landscape .sheet {
+    width: 420mm;
+    height: 296mm;
+    size: landscape;
+}
+
+.A4 .sheet {
+    width: 210mm;
+    height: 296mm;
+    size: portrait;
+
+}
+
+.A4.landscape .sheet {
+    width: 296mm;
+    height: 210mm;
+    size: landscape;
+}
+
+.A5 .sheet {
+    width: 148mm;
+    height: 209mm;
+    size: portrait;
+}
+
+.A5.landscape .sheet {
+    width: 210mm;
+    height: 147mm;
+    size: landscape;
+}
+
+/** Padding area **/
+.sheet.padding-5mm {
+    padding: 5mm
+}
+.sheet.padding-10mm {
+    padding: 10mm
+}
+
+.sheet.padding-15mm {
+    padding: 15mm
+}
+
+.sheet.padding-20mm {
+    padding: 20mm
+}
+
+.sheet.padding-25mm {
+    padding: 25mm
+}
+
+/** For screen preview **/
+@media screen {
+    .sheet {
+        background: white;
+        box-shadow: 0 0.5mm 2mm rgba(0, 0, 0, 0.3);
+        margin: 5mm auto;
+    }
+}
+
+/** Fix for Chrome issue #273306 **/
+@media print {
+    .A3.landscape {
+        width: 420mm;
+        size: landscape;
+    }
+
+    .A3,
+    .A4.landscape {
+        width: 297mm;
+        size: landscape;
+    }
+
+    .A4,
+    .A5.landscape {
+        width: 210mm;
+        size: landscape;
+    }
+
+    .A5 {
+        width: 148mm
+    }
+    .d-print-none {
+        display: none!important
+    }
+    *,
+    ::after,
+    ::before {
+        box-shadow: none !important;
+        text-shadow: none !important
+    }
+
+    .table-bordered td,
+    .table-bordered th {
+        border: 1px solid #dee2e6 !important
+    }
+
+}
+[id^="stage"] {
+    margin: auto;
+    padding: 1px !important;
+    border: 1px solid rgb(0, 0, 0, 0.1) !important;
+}
+
+.btn {
+    background-color: #008CBA;
+    color: white;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    position: relative;
+    letter-spacing: .025em;
+    text-transform: none;
+    will-change: transform;
+    font-size: .875rem;
+    font-weight: 600;
+    line-height: 1.5;
+    display: inline-block;
+    padding: .625rem 1.25rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+  }
+  .sticky{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+button , footer {
+    font-family:  Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', "Open Sans", monospace, "Khmer OS Battambang" !important;
+}
+footer{
+    font-weight: 600;
+    text-align: center;
+}
+body {
+    margin: 0;
+    background: gainsboro;
+    font-family: Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', "Open Sans", monospace, "Khmer OS Battambang" !important;
+}
+.d-none {
+    display: none;
+}
+.nodata{
+    height: 200px !important;
+}
+.nodata .nodata-text{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #ee5050;
+}
+
+
+.text-left {
+    text-align: left !important
+}
+
+.text-right {
+    text-align: right !important
+}
+
+.text-center {
+    text-align: center !important
+}
+.text-blue {
+    color: #5e72e4 !important
+}
+
+a.text-blue:focus,
+a.text-blue:hover {
+    color: #233dd2 !important
+}
+
+.text-indigo {
+    color: #5603ad !important
+}
+
+a.text-indigo:focus,
+a.text-indigo:hover {
+    color: #310262 !important
+}
+
+.text-purple {
+    color: #8965e0 !important
+}
+
+a.text-purple:focus,
+a.text-purple:hover {
+    color: #5a2acf !important
+}
+
+.text-pink {
+    color: #f3a4b5 !important
+}
+
+a.text-pink:focus,
+a.text-pink:hover {
+    color: #ea607e !important
+}
+
+.text-red {
+    color: #f5365c !important
+}
+
+a.text-red:focus,
+a.text-red:hover {
+    color: #d40b33 !important
+}
+
+.text-orange {
+    color: #fb6340 !important
+}
+
+a.text-orange:focus,
+a.text-orange:hover {
+    color: #ea3005 !important
+}
+
+.text-yellow {
+    color: #ffd600 !important
+}
+
+a.text-yellow:focus,
+a.text-yellow:hover {
+    color: #b39600 !important
+}
+
+.text-green {
+    color: #2dce89 !important
+}
+
+a.text-green:focus,
+a.text-green:hover {
+    color: #1f8f5f !important
+}
+
+.text-teal {
+    color: #11cdef !important
+}
+
+a.text-teal:focus,
+a.text-teal:hover {
+    color: #0b90a8 !important
+}
+
+.text-cyan {
+    color: #2bffc6 !important
+}
+
+a.text-cyan:focus,
+a.text-cyan:hover {
+    color: #00dea2 !important
+}
+
+.text-white {
+    color: #fff !important
+}
+
+a.text-white:focus,
+a.text-white:hover {
+    color: #d9d9d9 !important
+}
+
+.text-gray {
+    color: #8898aa !important
+}
+
+a.text-gray:focus,
+a.text-gray:hover {
+    color: #607286 !important
+}
+
+.text-gray-dark {
+    color: #32325d !important
+}
+
+a.text-gray-dark:focus,
+a.text-gray-dark:hover {
+    color: #17172b !important
+}
+
+.text-light {
+    color: #ced4da !important
+}
+
+a.text-light:focus,
+a.text-light:hover {
+    color: #a2aeb9 !important
+}
+
+.text-lighter {
+    color: #e9ecef !important
+}
+
+a.text-lighter:focus,
+a.text-lighter:hover {
+    color: #bdc6cf !important
+}
+.bg-blue {
+    background-color: #5e72e4!important
+}
+
+a.bg-blue:focus,a.bg-blue:hover,button.bg-blue:focus,button.bg-blue:hover {
+    background-color: #324cdd!important
+}
+
+.bg-indigo {
+    background-color: #5603ad!important
+}
+
+a.bg-indigo:focus,a.bg-indigo:hover,button.bg-indigo:focus,button.bg-indigo:hover {
+    background-color: #3d027b!important
+}
+
+.bg-purple {
+    background-color: #8965e0!important
+}
+
+a.bg-purple:focus,a.bg-purple:hover,button.bg-purple:focus,button.bg-purple:hover {
+    background-color: #683bd7!important
+}
+
+.bg-pink {
+    background-color: #f3a4b5!important
+}
+
+a.bg-pink:focus,a.bg-pink:hover,button.bg-pink:focus,button.bg-pink:hover {
+    background-color: #ed7790!important
+}
+
+.bg-red {
+    background-color: #f5365c!important
+}
+
+a.bg-red:focus,a.bg-red:hover,button.bg-red:focus,button.bg-red:hover {
+    background-color: #ec0c38!important
+}
+
+.bg-orange {
+    background-color: #fb6340!important
+}
+
+a.bg-orange:focus,a.bg-orange:hover,button.bg-orange:focus,button.bg-orange:hover {
+    background-color: #fa3a0e!important
+}
+
+.bg-yellow {
+    background-color: #ffd600!important
+}
+
+a.bg-yellow:focus,a.bg-yellow:hover,button.bg-yellow:focus,button.bg-yellow:hover {
+    background-color: #ccab00!important
+}
+
+.bg-green {
+    background-color: #2dce89!important
+}
+
+a.bg-green:focus,a.bg-green:hover,button.bg-green:focus,button.bg-green:hover {
+    background-color: #24a46d!important
+}
+
+.bg-teal {
+    background-color: #11cdef!important
+}
+
+a.bg-teal:focus,a.bg-teal:hover,button.bg-teal:focus,button.bg-teal:hover {
+    background-color: #0da5c0!important
+}
+
+.bg-cyan {
+    background-color: #2bffc6!important
+}
+
+a.bg-cyan:focus,a.bg-cyan:hover,button.bg-cyan:focus,button.bg-cyan:hover {
+    background-color: #00f7b5!important
+}
+
+.bg-white {
+    background-color: #fff!important
+}
+
+a.bg-white:focus,a.bg-white:hover,button.bg-white:focus,button.bg-white:hover {
+    background-color: #e6e6e6!important
+}
+
+.bg-gray {
+    background-color: #8898aa!important
+}
+
+a.bg-gray:focus,a.bg-gray:hover,button.bg-gray:focus,button.bg-gray:hover {
+    background-color: #6a7e95!important
+}
+
+.bg-gray-dark {
+    background-color: #32325d!important
+}
+
+a.bg-gray-dark:focus,a.bg-gray-dark:hover,button.bg-gray-dark:focus,button.bg-gray-dark:hover {
+    background-color: #20203c!important
+}
+
+.bg-light {
+    background-color: #ced4da!important
+}
+
+a.bg-light:focus,a.bg-light:hover,button.bg-light:focus,button.bg-light:hover {
+    background-color: #b1bbc4!important
+}
+
+.bg-lighter {
+    background-color: #e9ecef!important
+}
+
+a.bg-lighter:focus,a.bg-lighter:hover,button.bg-lighter:focus,button.bg-lighter:hover {
+    background-color: #cbd3da!important
+}
+
+.bg-gradient-primary {
+    background: linear-gradient(87deg,#5e72e4 0,#825ee4 100%)!important
+}
+
+.bg-gradient-secondary {
+    background: linear-gradient(87deg,#f7fafc 0,#f7f8fc 100%)!important
+}
+
+.bg-gradient-success {
+    background: linear-gradient(87deg,#2dce89 0,#2dcecc 100%)!important
+}
+
+.bg-gradient-info {
+    background: linear-gradient(87deg,#11cdef 0,#1171ef 100%)!important
+}
+
+.bg-gradient-warning {
+    background: linear-gradient(87deg,#fb6340 0,#fbb140 100%)!important
+}
+
+.bg-gradient-danger {
+    background: linear-gradient(87deg,#f5365c 0,#f56036 100%)!important
+}
+
+.bg-gradient-light {
+    background: linear-gradient(87deg,#adb5bd 0,#adaebd 100%)!important
+}
+
+.bg-gradient-dark {
+    background: linear-gradient(87deg,#212529 0,#212229 100%)!important
+}
+
+.bg-gradient-default {
+    background: linear-gradient(87deg,#172b4d 0,#1a174d 100%)!important
+}
+
+.bg-gradient-white {
+    background: linear-gradient(87deg,#fff 0,#fff 100%)!important
+}
+
+.bg-gradient-neutral {
+    background: linear-gradient(87deg,#fff 0,#fff 100%)!important
+}
+
+.bg-gradient-darker {
+    background: linear-gradient(87deg,#000 0,#000 100%)!important
+}
+
+.bg-gradient-blue {
+    background: linear-gradient(87deg,#5e72e4 0,#825ee4 100%)!important
+}
+
+.bg-gradient-indigo {
+    background: linear-gradient(87deg,#5603ad 0,#9d03ad 100%)!important
+}
+
+.bg-gradient-purple {
+    background: linear-gradient(87deg,#8965e0 0,#bc65e0 100%)!important
+}
+
+.bg-gradient-pink {
+    background: linear-gradient(87deg,#f3a4b5 0,#f3b4a4 100%)!important
+}
+
+.bg-gradient-red {
+    background: linear-gradient(87deg,#f5365c 0,#f56036 100%)!important
+}
+
+.bg-gradient-orange {
+    background: linear-gradient(87deg,#fb6340 0,#fbb140 100%)!important
+}
+
+.bg-gradient-yellow {
+    background: linear-gradient(87deg,#ffd600 0,#beff00 100%)!important
+}
+
+.bg-gradient-green {
+    background: linear-gradient(87deg,#2dce89 0,#2dcecc 100%)!important
+}
+
+.bg-gradient-teal {
+    background: linear-gradient(87deg,#11cdef 0,#1171ef 100%)!important
+}
+
+.bg-gradient-cyan {
+    background: linear-gradient(87deg,#2bffc6 0,#2be0ff 100%)!important
+}
+
+.bg-gradient-white {
+    background: linear-gradient(87deg,#fff 0,#fff 100%)!important
+}
+
+.bg-gradient-gray {
+    background: linear-gradient(87deg,#8898aa 0,#888aaa 100%)!important
+}
+
+.bg-gradient-gray-dark {
+    background: linear-gradient(87deg,#32325d 0,#44325d 100%)!important
+}
+
+.bg-gradient-light {
+    background: linear-gradient(87deg,#ced4da 0,#cecfda 100%)!important
+}
+
+.bg-gradient-lighter {
+    background: linear-gradient(87deg,#e9ecef 0,#e9eaef 100%)!important
+}
+
+.bg-translucent-primary {
+    background-color: rgba(63,87,223,.6)!important
+}
+
+a.bg-translucent-primary:focus,a.bg-translucent-primary:hover,button.bg-translucent-primary:focus,button.bg-translucent-primary:hover {
+    background-color: rgba(42,68,219,.6)!important
+}
+
+.bg-translucent-secondary {
+    background-color: rgba(221,234,242,.6)!important
+}
+
+a.bg-translucent-secondary:focus,a.bg-translucent-secondary:hover,button.bg-translucent-secondary:focus,button.bg-translucent-secondary:hover {
+    background-color: rgba(202,222,235,.6)!important
+}
+
+.bg-translucent-success {
+    background-color: rgba(39,177,118,.6)!important
+}
+
+a.bg-translucent-success:focus,a.bg-translucent-success:hover,button.bg-translucent-success:focus,button.bg-translucent-success:hover {
+    background-color: rgba(34,156,104,.6)!important
+}
+
+.bg-translucent-info {
+    background-color: rgba(14,177,206,.6)!important
+}
+
+a.bg-translucent-info:focus,a.bg-translucent-info:hover,button.bg-translucent-info:focus,button.bg-translucent-info:hover {
+    background-color: rgba(12,156,183,.6)!important
+}
+
+.bg-translucent-warning {
+    background-color: rgba(250,70,29,.6)!important
+}
+
+a.bg-translucent-warning:focus,a.bg-translucent-warning:hover,button.bg-translucent-warning:focus,button.bg-translucent-warning:hover {
+    background-color: rgba(249,51,5,.6)!important
+}
+
+.bg-translucent-danger {
+    background-color: rgba(243,20,64,.6)!important
+}
+
+a.bg-translucent-danger:focus,a.bg-translucent-danger:hover,button.bg-translucent-danger:focus,button.bg-translucent-danger:hover {
+    background-color: rgba(227,11,54,.6)!important
+}
+
+.bg-translucent-light {
+    background-color: rgba(153,163,173,.6)!important
+}
+
+a.bg-translucent-light:focus,a.bg-translucent-light:hover,button.bg-translucent-light:focus,button.bg-translucent-light:hover {
+    background-color: rgba(139,150,162,.6)!important
+}
+
+.bg-translucent-dark {
+    background-color: rgba(17,19,21,.6)!important
+}
+
+a.bg-translucent-dark:focus,a.bg-translucent-dark:hover,button.bg-translucent-dark:focus,button.bg-translucent-dark:hover {
+    background-color: rgba(6,6,7,.6)!important
+}
+
+.bg-translucent-default {
+    background-color: rgba(15,28,50,.6)!important
+}
+
+a.bg-translucent-default:focus,a.bg-translucent-default:hover,button.bg-translucent-default:focus,button.bg-translucent-default:hover {
+    background-color: rgba(9,17,30,.6)!important
+}
+
+.bg-translucent-white {
+    background-color: rgba(237,237,237,.6)!important
+}
+
+a.bg-translucent-white:focus,a.bg-translucent-white:hover,button.bg-translucent-white:focus,button.bg-translucent-white:hover {
+    background-color: rgba(224,224,224,.6)!important
+}
+
+.bg-translucent-neutral {
+    background-color: rgba(237,237,237,.6)!important
+}
+
+a.bg-translucent-neutral:focus,a.bg-translucent-neutral:hover,button.bg-translucent-neutral:focus,button.bg-translucent-neutral:hover {
+    background-color: rgba(224,224,224,.6)!important
+}
+
+.bg-translucent-darker {
+    background-color: rgba(0,0,0,.6)!important
+}
+
+a.bg-translucent-darker:focus,a.bg-translucent-darker:hover,button.bg-translucent-darker:focus,button.bg-translucent-darker:hover {
+    background-color: rgba(0,0,0,.6)!important
+}
+
+.section-primary {
+    background-color: #f8f9fe!important
+}
+
+a.section-primary:focus,a.section-primary:hover,button.section-primary:focus,button.section-primary:hover {
+    background-color: #cbd3f8!important
+}
+
+.section-secondary {
+    background-color: #f7fafc!important
+}
+
+a.section-secondary:focus,a.section-secondary:hover,button.section-secondary:focus,button.section-secondary:hover {
+    background-color: #d2e3ee!important
+}
+
+.section-light {
+    background-color: #ced4da!important
+}
+
+a.section-light:focus,a.section-light:hover,button.section-light:focus,button.section-light:hover {
+    background-color: #b1bbc4!important
+}
+
+.section-dark {
+    background-color: #212529!important
+}
+
+a.section-dark:focus,a.section-dark:hover,button.section-dark:focus,button.section-dark:hover {
+    background-color: #0a0c0d!important
+}
+
+.section-darker {
+    background-color: #000!important
+}
+
+a.section-darker:focus,a.section-darker:hover,button.section-darker:focus,button.section-darker:hover {
+    background-color: #000!important
+}
+
+.bg-gradient-primary {
+    background: linear-gradient(87deg,#5e72e4 0,#825ee4 100%)!important
+}
+
+.bg-gradient-secondary {
+    background: linear-gradient(87deg,#f7fafc 0,#f7f8fc 100%)!important
+}
+
+.bg-gradient-success {
+    background: linear-gradient(87deg,#2dce89 0,#2dcecc 100%)!important
+}
+
+.bg-gradient-info {
+    background: linear-gradient(87deg,#11cdef 0,#1171ef 100%)!important
+}
+
+.bg-gradient-warning {
+    background: linear-gradient(87deg,#fb6340 0,#fbb140 100%)!important
+}
+
+.bg-gradient-danger {
+    background: linear-gradient(87deg,#f5365c 0,#f56036 100%)!important
+}
+
+.bg-gradient-light {
+    background: linear-gradient(87deg,#adb5bd 0,#adaebd 100%)!important
+}
+
+.bg-gradient-dark {
+    background: linear-gradient(87deg,#212529 0,#212229 100%)!important
+}
+
+.bg-gradient-default {
+    background: linear-gradient(87deg,#172b4d 0,#1a174d 100%)!important
+}
+
+.bg-gradient-white {
+    background: linear-gradient(87deg,#fff 0,#fff 100%)!important
+}
+
+.bg-gradient-neutral {
+    background: linear-gradient(87deg,#fff 0,#fff 100%)!important
+}
+
+.bg-gradient-darker {
+    background: linear-gradient(87deg,#000 0,#000 100%)!important
+}
+.table{
+	border: 0 none;
+	height: auto;
+	width: auto;
+	border-collapse: collapse;
+	border-spacing: 0;
+	white-space:nowrap;
+}
+
+.btn-group-sm>.btn, .btn-sm {
+    font-size: .75rem;
+    line-height: 1.5;
+    padding: .25rem .5rem;
+    border-radius: .25rem;
+}
+
+.btn-danger {
+    color: #fff;
+    border-color: #f5365c;
+    background-color: #f5365c;
+    box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
+}
